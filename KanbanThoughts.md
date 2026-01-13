@@ -48,50 +48,70 @@ But how does this apply to software?
 
 Here's how I like to set up my team's Kanban board:
 
-<table>
+<table style="table-layout:fixed; width:100%;">
   <tr>
-    <td>
-      <div style="border:1px solid black; padding:6px;">
+    <td style="width:120px; vertical-align:top;">
+      <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
         <strong>Backlog</strong><br>
         <em>WIP: ∞</em><br>
-        🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br> <br> <br> <br> <br> <br> <br>
+        🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>
+        <br><br><br><br><br><br><br>
       </div>
     </td>
-    <td>
-      <div style="border:1px solid black; padding:6px;">
+    <td style="width:200px; vertical-align:top;">
+      <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
         <strong>UX</strong><br>
         <em>WIP Limit: 25</em>
-        <table>
+        <table style="width:100%; table-layout:fixed;">
           <tr>
-            <td><strong>Working</strong><br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br> <br> <br> <br> <br> <br> <br> <br> <br></td>
-            <td><strong>Done</strong><br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br> <br><br> <br> <br> <br> <br> <br> <br> <br> <br> <br></td>
+            <td style="width:50%; vertical-align:top;">
+              <strong>Working</strong><br>
+              🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>
+              <br><br><br><br><br><br><br><br><br>
+            </td>
+            <td style="width:50%; vertical-align:top;">
+              <strong>Done</strong><br>
+              🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>
+              <br><br><br><br><br><br><br><br><br><br><br>
+            </td>
           </tr>
         </table>
       </div>
     </td>
-    <td>
-      <div style="border:1px solid black; padding:6px;">
+    <td style="width:200px; vertical-align:top;">
+      <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
         <strong>Dev</strong><br>
         <em>WIP Limit: 25</em>
-        <table>
+        <table style="width:100%; table-layout:fixed;">
           <tr>
-            <td><strong>Working</strong><br>🟨 Story<br>🟨 Story<br>🟨 Story<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></td>
-            <td><strong>Done</strong><br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br> <br> <br> <br> <br> <br> <br></td>
+            <td style="width:50%; vertical-align:top;">
+              <strong>Working</strong><br>
+              🟨 Story<br>🟨 Story<br>🟨 Story<br>
+              <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </td>
+            <td style="width:50%; vertical-align:top;">
+              <strong>Done</strong><br>
+              🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>
+              <br><br><br><br><br><br><br>
+            </td>
           </tr>
         </table>
       </div>
     </td>
-    <td>
-      <div style="border:1px solid black; padding:6px;">
+    <td style="width:120px; vertical-align:top;">
+      <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
         <strong>QA</strong><br>
         <em>WIP: 25</em><br>
-        🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br> <br> <br> <br> <br>
+        🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>
+        <br><br><br><br><br>
       </div>
     </td>
-    <td>
-      <div style="border:1px solid black; padding:6px;">
+    <td style="width:120px; vertical-align:top;">
+      <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
         <strong>Final Done</strong><br>
-        <em>WIP:  ∞</em><br>🟨 Story<br>🟨 Story<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></td>
+        <em>WIP: ∞</em><br>
+        🟨 Story<br>🟨 Story<br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       </div>
     </td>
   </tr>
