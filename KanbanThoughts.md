@@ -19,7 +19,7 @@ So, let's start off with a simple quiz:  which of the following are true and whi
 3. **The more productive a team is, the sooner you can ship.**
 4. **Projects will be more successful if you get them right the first time.**
 
-I'll answer each of these as we go along, but if you want to see the answers now, click [here](answers.html).
+I'll answer each of these as we go along, but if you want to see the answers now, click [here](Answers.html).
 
 ## Kanban Beginnings
 
@@ -172,11 +172,9 @@ You've already hired the best people you can find, so more training or other tec
 
 All you can fiddle with is the WIP limits. Go ahead and play with the [Kanban Simulator](KanbanSimulator.html), until you have cycle time (also called "Sojourn time") minimized.
 
-For a system with 25 cards and essentially no WIP limits (that is, all 25 cards could be in any activity), the cycle time is 13.88 days.
+Click [here](Answers2.html) to see if you got it right.
 
-For a system with WIP limits of 1 for each column, the cycle time is 2.94 days.
-
-Here's the important bit:  the throughput didn't budge - it's still 0.97 cards per day (it's not exactly 1.00 because of "entrance effects":  it takes a day or two for the first card even to get to the bottleneck at QA).
+Here's the important bit:  **changing the WIP limits didn't change the throughput** - it's still 0.97 cards per day (it's not exactly 1.00 because of "entrance effects":  it takes a day or two for the first card even to get to the bottleneck at QA).
 
 So, UX (or dev) being idle doesn't hurt the throughput. But it presents an opportunity.
 
