@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kanban Simulator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .board {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .column {
+      border: 1px solid #333;
+      padding: 10px;
+      margin: 5px;
+      width: 120px;
+      height: 1000px;
+      overflow-y: auto;
+    }
+
+    .column h3 {
+      margin-top: 0;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .card {
+      background: #fff176; /* softer yellow, post-it style */
+      margin: 4px auto;     /* center horizontally */
+      padding: 8px;
+      width: 80px;          /* narrower, like a sticky note */
+      text-align: center;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* subtle shadow for paper effect */
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .controls label {
+      display: inline-block;
+      width: 120px;
+    }
+
+    .group {
+      border: 2px solid #666;
+      padding: 5px;
+      margin: 5px;
+    }
+
+    .group-label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .group-columns {
+      display: flex;
+    }
+
+    .group-label.infinity {
+      font-size: 1.2em;
+    }
+
+    input[type="number"] {
+      width: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kanban Simulator</h1>
+  <div class="controls">
+    <div class="row">
+      <div><label for="uxWorkers">UX Workers:</label><input id="uxWorkers"    type="number" value="1" min="1" /></div>
+      <div><label for="uxWip"    >UX WIP:    </label><input id="uxWip"        type="number" value="25" min="1" /></div>
+      <div><label for="uxRate"   >UX Rate:   </label><input id="uxRate"       type="number" value="3" min="1" /></div>
+    </div>
+    <div class="row">
+      <div><label for="devWorkers">Dev Workers:</label><input id="devWorkers" type="number" value="1" min="1" /></div>
+      <div><label for="devWip"    >Dev WIP:    </label><input id="devWip"     type="number" value="25" min="1" /></div>
+      <div><label for="devRate"   >Dev Rate:   </label><input id="devRate"    type="number" value="2" min="1" /></div>
+    </div>
+    <div class="row">
+      <div><label for="qaWorkers">QA Workers:</label><input id="qaWorkers"    type="number" value="1" min="1" /></div>
+      <div><label for="qaWip"    >QA WIP:    </label><input id="qaWip"        type="number" value="25" min="1" /></div>
+      <div><label for="qaRate"   >QA Rate:   </label><input id="qaRate"       type="number" value="1" min="1" /></div>
+    </div>
+    <div class="row">
+      <button onclick="initSimulator()">Restart</button>
+      <button onclick="step()">Step</button>
+      <button onclick="run()">Run</button>
+    </div>
+  </div>
+  <div id="results">Throughput: 0.00 cards/day | Avg Sojourn time: 00.00 days</div>
+
+  <div class="board" id="board"></div>
+
+<script>
+class Card {
+  constructor(startHour=0) {
+    this.workRemaining = 1.0;
+    this.startHour = startHour;
+    this.endHour = 0;
+  }
+  isDone() { return this.workRemaining <= 0.0; }
+  getFlightTime() { return this.endHour - this.startHour; }
+  work(capacity) {
+    if (this.workRemaining > capacity) {
+      this.workRemaining -= capacity;
+      return 0.0;
+    } else {
+      capacity -= this.workRemaining;
+      this.workRemaining = 0.0;
+      return capacity;
+    }
+  }
+  setEndHour(hour) { this.endHour = hour; }
+}
+
+class Simulator {
+  constructor(config) {
+    this.config = config;
+    this.columns = {
+      backlog: [],
+      uxWorking: [], uxDone: [],
+      devWorking: [], devDone: [],
+      qaWorking: [],
+      finalDone: []
+    };
+    this.hour = 0;
+    for (let i=0; i<25; i++) this.columns.backlog.push(new Card());
+  }
+
+  // helper method to build a column with heading and cards
+  createColumn(title, cards) {
+    let div = document.createElement("div");
+    div.className = "column";
+    div.innerHTML = `<h3>${title}</h3>`;
+    for (let card of cards) {
+      let c = document.createElement("div");
+      c.className = "card";
+      c.textContent = "Story";
+      div.appendChild(c);
+    }
+    return div;
+  }
+  step() {
+    if (this.isAllDone()) return;
+    this.hour++;
+
+    // pull from right to left
+    this.processPhase( "qaWorking",  "finalDone", this.config.qaWorkers,  this.config.qaRate /8.0,  this.config.qaWip,  true,  "devDone");
+    this.processPhase("devWorking",    "devDone", this.config.devWorkers, this.config.devRate/8.0,  this.config.devWip, false,  "uxDone");
+    this.processPhase( "uxWorking",     "uxDone", this.config.uxWorkers,  this.config.uxRate /8.0,  this.config.uxWip,  false, "backlog");
+    this.render();
+  }
+
+  processPhase(workCol, doneCol, workers, rate, wipLimit, isLast, prevColName) {
+    let workColumn = this.columns[workCol];
+    let doneColumn = this.columns[doneCol];
+    let prevColumn = this.columns[prevColName];
+
+    // pull cards until we hit the wip limit (pulling cards is free)
+    while (prevColumn.length > 0) {
+      let currentWIP = workColumn.length + (isLast ? 0 : doneColumn.length);
+      if (currentWIP >= wipLimit) break;
+
+      let newCard = (prevColName === "backlog") ? new Card(this.hour) : new Card(prevColumn[0].startHour);
+      workColumn.push(newCard);
+      prevColumn.shift();
+    }
+
+    for (let w=0; w<workers; w++) {
+      let capacity = rate;
+      while (capacity > 0 && workColumn.length > 0) {
+        let card = workColumn[0];
+        capacity = card.work(capacity);
+        if (card.isDone()) {
+          if (isLast) card.setEndHour(this.hour+1);
+          doneColumn.push(card);
+          workColumn.shift();
+        }
+      }
+    }
+  }
+
+  isAllDone() { return this.columns.finalDone.length === 25; }
+  getAverageFlightTime() {
+    let total = 0;
+    for (let card of this.columns.finalDone) total += card.getFlightTime();
+    return total / 25.0 / 8.0;
+  }
+  getThroughput() { return 25.0 * 8.0 / this.hour; }
+
+  render() {
+    let board = document.getElementById("board");
+    board.innerHTML = "";
+
+    for (let [name, col] of Object.entries(this.columns)) {
+      if (name === "backlog") {
+        let wrapper = document.createElement("div");
+        wrapper.className = "group";
+        wrapper.innerHTML = `<div class="group-label">WIP <span class="infinity">∞</span></div>`;
+        wrapper.appendChild(this.createColumn("Backlog", col));
+        board.appendChild(wrapper);
+
+      } else if (name === "uxWorking") {
+        let wrapper = document.createElement("div");
+        wrapper.className = "group";
+        wrapper.innerHTML = `<div class="group-label">UX: WIP ${this.config.uxWip}</div>`;
+        let cols = document.createElement("div");
+        cols.className = "group-columns";
+        cols.appendChild(this.createColumn("Working", col));
+        cols.appendChild(this.createColumn("Done", this.columns.uxDone));
+        wrapper.appendChild(cols);
+        board.appendChild(wrapper);
+
+      } else if (name === "uxDone") {
+        continue;
+
+      } else if (name === "devWorking") {
+        let wrapper = document.createElement("div");
+        wrapper.className = "group";
+        wrapper.innerHTML = `<div class="group-label">Dev: WIP ${this.config.devWip}</div>`;
+        let cols = document.createElement("div");
+        cols.className = "group-columns";
+        cols.appendChild(this.createColumn("Working", col));
+        cols.appendChild(this.createColumn("Done", this.columns.devDone));
+        wrapper.appendChild(cols);
+        board.appendChild(wrapper);
+
+      } else if (name === "devDone") {
+        continue;
+
+      } else if (name === "qaWorking") {
+        let wrapper = document.createElement("div");
+        wrapper.className = "group";
+        wrapper.innerHTML = `<div class="group-label">QA: WIP ${this.config.qaWip}</div>`;
+        wrapper.appendChild(this.createColumn("Working", col));
+        board.appendChild(wrapper);
+
+      } else if (name === "finalDone") {
+        let wrapper = document.createElement("div");
+        wrapper.className = "group";
+        wrapper.innerHTML = `<div class="group-label">WIP <span class="infinity">∞</span></div>`;
+        wrapper.appendChild(this.createColumn("Done", col));
+        board.appendChild(wrapper);
+
+      } else {
+        board.appendChild(this.createColumn(name, col));
+      }
+    }
+  }
+}
+
+let sim;
+
+function initSimulator() {
+  let params = new URLSearchParams(window.location.search);
+  function getVal(id, def) {
+    return parseFloat(params.get(id) || document.getElementById(id).value || def);
+  }
+  let config = {
+    uxWorkers:  getVal("uxWorkers",3),
+    devWorkers: getVal("devWorkers",3),
+    qaWorkers:  getVal("qaWorkers",1),
+    uxWip:      getVal("uxWip",10),
+    devWip:     getVal("devWip",10),
+    qaWip:      getVal("qaWip",1),
+    uxRate:     getVal("uxRate",4),
+    devRate:    getVal("devRate",4),
+    qaRate:     getVal("qaRate",1)
+  };
+  sim = new Simulator(config);
+  sim.render();
+}
+
+function step() {
+  sim.step();
+  if (sim.isAllDone()) showResults();
+}
+
+function run() {
+    initSimulator();
+
+  function loop() {
+    if (!sim.isAllDone()) {
+      sim.step();
+      setTimeout(loop, 12.5);
+    } else {
+      showResults();
+    }
+  }
+  loop();
+}
+
+function showResults() {
+  document.getElementById("results").innerText =
+    `Throughput: ${sim.getThroughput().toFixed(2)} cards/day | Avg Sojourn time: ${sim.getAverageFlightTime().toFixed(2)} days`;
+}
+</script>
+</body>
+</html>
