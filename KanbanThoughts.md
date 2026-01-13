@@ -46,7 +46,7 @@ But how does this apply to software?
 
 1. Kanban has a series of **columns**, containing queueus of work, represented by **cards in priority order**.
 2. Kanban has **WIP limits**:  that is, "work-in-progress" limits on each activities column(s). These WIP limits limit how much work can be in your column(s). Electronic Kanban boards will prevent you from pulling a card if you're at the limit. If you're using a whiteboard, then it's set by policy that must be obeyed.
-3. Kanban is **pull-model**:  work isn't pushed at you. Instead, when you're freed up, you pull the most important thing to do from your backlog.
+3. Kanban is **pull-model**:  work isn't pushed at you. Instead, when you're freed up, you pull the most important thing to do from your backlog, that is, the column to the left of your column(s).
 
 Here's how I like to set up my team's Kanban board:
 
