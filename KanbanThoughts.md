@@ -63,7 +63,7 @@ Here's how I like to set up my team's Kanban board:
     <td style="width:200px; vertical-align:top;">
       <div style="border:1px solid black; padding:6px; height:500px;">
         <strong>UX</strong><br>
-        <em>WIP Limit: 25</em>
+        <em>WIP: 25</em>
         <table style="width:100%; table-layout:fixed;">
           <tr>
             <td style="width:50%; vertical-align:top;">
@@ -83,7 +83,7 @@ Here's how I like to set up my team's Kanban board:
     <td style="width:200px; vertical-align:top;">
       <div style="border:1px solid black; padding:6px; height:500px;">
         <strong>Dev</strong><br>
-        <em>WIP Limit: 25</em>
+        <em>WIP: 25</em>
         <table style="width:100%; table-layout:fixed;">
           <tr>
             <td style="width:50%; vertical-align:top;">
