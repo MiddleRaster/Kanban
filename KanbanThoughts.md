@@ -127,7 +127,7 @@ Here's how I like to set up my team's Kanban board:
   </tr>
 </table>
 
-### How Cards Flow Through the System
+## How Cards Flow Through the System
 
 Let's follow a card through the system; let's follow the top priority card in the product backlog.
 
@@ -145,7 +145,7 @@ If there isn't another card to pull out of UX's "done" pile, then he's *starved*
 
 The same process continues to the QA activity, except that when QA is done with a card, it goes onto the "Final Done" pile.
 
-### Calculating Cycle time
+## Calculating Cycle time
 
 Cycle time is the time from when a card is first pulled from the backlog until it's put into the Final Done pile.
 
