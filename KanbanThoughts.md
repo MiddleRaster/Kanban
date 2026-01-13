@@ -11,7 +11,7 @@ Too often they do what has been called "ScrummerFall" or "Cargo-cult Scrum," the
 I'm seeing the same thing, if not more so, in Kanban, most notably when people claim to be doing Kanban but don't have any WIP limits.
 I think it's worse in Kanban because queueing theory is so very counterintuitive.
 Proof:  we have traffic jams, lots of them, all the time.
-If we naturally understood queueing theory, that wouldn't be the case.
+If we intuitively understood queueing theory, that wouldn't be the case.
 
 So, let's start off with a simple quiz:  which of the following are true and which are false?
 1. **Shipping more frequently is the goal.**
