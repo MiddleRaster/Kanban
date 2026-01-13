@@ -105,6 +105,27 @@
   <div class="board" id="board"></div>
 
 <script>
+
+window.onload = function () {
+  const params = new URLSearchParams(window.location.search);
+
+  // Workers
+  document.getElementById("uxWorkers").value  = params.get("ux")     || 1;
+  document.getElementById("devWorkers").value = params.get("dev")    || 1;
+  document.getElementById("qaWorkers").value  = params.get("qa")     || 1;
+
+  // Rates
+  document.getElementById("uxRate").value     = params.get("uxrate")  || 3;
+  document.getElementById("devRate").value    = params.get("devrate") || 2;
+  document.getElementById("qaRate").value     = params.get("qarate")  || 1;
+
+  // WIP Limits
+  document.getElementById("uxWip").value      = params.get("uxwip")   || 25;
+  document.getElementById("devWip").value     = params.get("devwip")  || 25;
+  document.getElementById("qaWip").value      = params.get("qawip")   || 25;
+};
+
+
 class Card {
   constructor(startHour=0) {
     this.workRemaining = 1.0;
