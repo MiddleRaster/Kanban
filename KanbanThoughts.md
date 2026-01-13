@@ -118,7 +118,7 @@ Here's how I like to set up my team's Kanban board:
     </td>
   </tr>
 </table>
-All done
+
 
 
 
