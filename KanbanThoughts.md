@@ -54,7 +54,7 @@ Here's how I like to set up my team's Kanban board:
       <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
         <strong>Backlog</strong><br>
         <em>WIP: ∞</em><br>
-        🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>
+        🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>
         <br><br><br><br><br><br><br>
       </div>
     </td>
@@ -66,12 +66,12 @@ Here's how I like to set up my team's Kanban board:
           <tr>
             <td style="width:50%; vertical-align:top;">
               <strong>Working</strong><br>
-              🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>
+              🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>
               <br><br><br><br><br><br><br><br><br>
             </td>
             <td style="width:50%; vertical-align:top;">
               <strong>Done</strong><br>
-              🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>
+              🟨 <br>🟨 <br>🟨 <br>🟨 <br>
               <br><br><br><br><br><br><br><br><br><br><br>
             </td>
           </tr>
@@ -86,12 +86,12 @@ Here's how I like to set up my team's Kanban board:
           <tr>
             <td style="width:50%; vertical-align:top;">
               <strong>Working</strong><br>
-              🟨 Story<br>🟨 Story<br>🟨 Story<br>
+              🟨 <br>🟨 <br>🟨 <br>
               <br><br><br><br><br><br><br><br><br><br><br><br><br>
             </td>
             <td style="width:50%; vertical-align:top;">
               <strong>Done</strong><br>
-              🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>
+              🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>
               <br><br><br><br><br><br><br>
             </td>
           </tr>
@@ -102,7 +102,7 @@ Here's how I like to set up my team's Kanban board:
       <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
         <strong>QA</strong><br>
         <em>WIP: 25</em><br>
-        🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>🟨 Story<br>
+        🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>
         <br><br><br><br><br>
       </div>
     </td>
@@ -110,7 +110,7 @@ Here's how I like to set up my team's Kanban board:
       <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
         <strong>Final Done</strong><br>
         <em>WIP: ∞</em><br>
-        🟨 Story<br>🟨 Story<br>
+        🟨 <br>🟨 <br>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       </div>
     </td>
