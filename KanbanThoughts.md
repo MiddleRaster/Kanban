@@ -51,7 +51,7 @@ Here's how I like to set up my team's Kanban board:
 <table style="table-layout:fixed; width:100%;">
   <tr>
     <td style="width:120px; vertical-align:top;">
-      <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
+      <div style="border:1px solid black; padding:6px; height:500px;">
         <strong>Backlog</strong><br>
         <em>WIP: ∞</em><br>
         🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>
@@ -59,7 +59,7 @@ Here's how I like to set up my team's Kanban board:
       </div>
     </td>
     <td style="width:200px; vertical-align:top;">
-      <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
+      <div style="border:1px solid black; padding:6px; height:500px;">
         <strong>UX</strong><br>
         <em>WIP Limit: 25</em>
         <table style="width:100%; table-layout:fixed;">
@@ -79,7 +79,7 @@ Here's how I like to set up my team's Kanban board:
       </div>
     </td>
     <td style="width:200px; vertical-align:top;">
-      <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
+      <div style="border:1px solid black; padding:6px; height:500px;">
         <strong>Dev</strong><br>
         <em>WIP Limit: 25</em>
         <table style="width:100%; table-layout:fixed;">
@@ -99,7 +99,7 @@ Here's how I like to set up my team's Kanban board:
       </div>
     </td>
     <td style="width:120px; vertical-align:top;">
-      <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
+      <div style="border:1px solid black; padding:6px; height:500px;">
         <strong>QA</strong><br>
         <em>WIP: 25</em><br>
         🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>🟨 <br>
@@ -107,7 +107,7 @@ Here's how I like to set up my team's Kanban board:
       </div>
     </td>
     <td style="width:120px; vertical-align:top;">
-      <div style="border:1px solid black; padding:6px; height:500px; overflow:auto;">
+      <div style="border:1px solid black; padding:6px; height:500px;">
         <strong>Final Done</strong><br>
         <em>WIP: ∞</em><br>
         🟨 <br>🟨 <br>
