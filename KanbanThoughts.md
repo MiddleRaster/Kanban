@@ -106,8 +106,5 @@ Conclusion: even doing very little can result helping the throughput at the bott
 
 ## Utilization
 
-
-
-
-
+![Alt text](./ThroughputVsUtilization.jpg)
 
