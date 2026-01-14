@@ -98,7 +98,7 @@ But it does present an opportunity:  those **idle resources can swarm on the bot
 Ideally, we want idle resources to swarm on the bottleneck, but the question always arises:  if I'm a UX person (and cannot code), how can I help devs or QA? Similarly, if UX is the bottleneck, how can devs or QA help with UX work?
 
 The answer is simpler than you might think:  do anything you can; run errands for the bottlenecked workers; get them coffee; pair with them.
-After observing them for a while, you might even become a T-shaped resource:  someone with deep expertise in one area but a little bit of expertise in upstreama and downstream tasks.
+After observing them for a while, you might even become a T-shaped resource:  someone with deep expertise in one area but a little bit of expertise in upstream and downstream tasks.
 Ideally, you'll become an M-shaped resource with depth both up- and downstream.
 
 Here's a quick story:  I was pairing with a non-coder, Alex, on his tasks when his boss walked by.
