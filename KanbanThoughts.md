@@ -114,7 +114,7 @@ And that's completely wrong.
 
 ![Alt text](./ThroughputVsUtilization.jpg)
 
-We already talked about how having one or more idle resource who swarm on the bottleneck increases throughput.
+We already talked about how having one or more idle resources who swarm on the bottleneck increases throughput.
 
 This section answers the third question from our quiz:  "Is high team utilization is a good thing?"
 
