@@ -66,8 +66,8 @@ The difference between these two timestamps is the cycle time for that card.
 
 ## Kanban Simulator Exercise
 
-When I was a dev-instructor at *StupendousCorp*, when teaching our Agile/Estimations/Kanban class, I would talk about cycle time and queueing theory, and though people nodded, I could tell from what they said they didn't really gret it.
-No further explaining was going to help, so I wrote a Kanban simulator.
+When I was a dev-instructor at *StupendousCorp*, when teaching our Agile/Estimations/Kanban class, I would talk about cycle time and queueing theory, and though people nodded, I could tell from what they said they didn't really get it.
+No further explaining was going to help, so I wrote a Kanban simulator to allow them to be a feel for it.
 
 So, here's an exercise. Suppose you have a tiny team with 1 UX person, 1 Dev person and 1 QA person.
 And suppose the UX work gets 3 cards done in a day, dev gets 2 cards done per day, and QA does 1 card per day.
@@ -85,7 +85,28 @@ Click [here](Answers2.html) to see if you got it right.
 
 Here's the important bit:  **changing the WIP limits didn't change the throughput** - it's still 0.97 cards per day (it's not exactly 1.00 because of "entrance effects":  it takes a day or two for the first card even to get to the bottleneck at QA).
 
-So, UX (or dev) being idle doesn't hurt the throughput. But it presents an opportunity.
+Here's another important bit:  if you see work piling up, it's just sitting there aging, which means cycle times are long. **Long queues == long cycle time.**
+
+
+So, UX (or dev) being idle doesn't hurt the throughput. 
+But it does present an opportunity:  those **idle resources can swarm on the bottleneck, and that will increase throughput.**
+
+## T-Shaped Resources
+
+Ideally, we want idle resources to swarm on the bottleneck, but the question always arises:  if I'm a UX person (and cannot code), how can I help devs or QA? Similarly, if UX is the bottleneck, how can devs or QA help with UX work?
+
+The answer is simpler than you might think:  do anything you can; run errands for the bottlenecked workers; get them coffee; pair with them.
+After observing them for a while, you might even become a T-shaped resource:  someone with deep expertise in one area but a little bit of expertise in upstreama and downstream tasks.
+Ideally, you'll become an M-shaped resource with depth both up- and downstream.
+
+Here's a quick story:  I was pairing with a non-coder, Alex, on his tasks when his boss walked by.
+She spoke to him for just a minute and then left. 
+Alex turned to me and said, "Wpw, this pairing really works. Usually, she would have chatted with me for an hour."
+Conclusion: even doing very little can result helping the throughput at the bottleneck.
+
+## Utilization
+
+
 
 
 
