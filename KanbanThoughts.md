@@ -67,7 +67,7 @@ The difference between these two timestamps is the cycle time for that card.
 ## Kanban Simulator Exercise
 
 When I was a dev-instructor at *StupendousCorp*, when teaching our Agile/Estimations/Kanban class, I would talk about cycle time and queueing theory, and though people nodded, I could tell from what they said they didn't really get it.
-No further explaining was going to help, so I wrote a Kanban simulator to allow them to be a feel for it.
+No further explaining was going to help, so I wrote a Kanban simulator to allow them to get a feel for it.
 
 So, here's an exercise. Suppose you have a tiny team with 1 UX person, 1 Dev person and 1 QA person.
 And suppose the UX work gets 3 cards done in a day, dev gets 2 cards done per day, and QA does 1 card per day.
