@@ -86,7 +86,8 @@ Click [here](Answers2.html) to see if you got it right.
 Here's the important bit:  **changing the WIP limits didn't change the throughput** - it's still 0.97 cards per day (it's not exactly 1.00 because of "entrance effects":  it takes a day or two for the first card even to get to the bottleneck at QA).
 
 This answers our second question from the quiz:  "Will a more productive a team ship sooner?"
-No, **cycle time is independent of throughput.**
+
+The answer is No: **cycle time is independent of throughput.**
 
 Here's another important bit:  if you see work piling up, it's just sitting there aging, which means cycle times are long. **Long queues imply long cycle times.**
 
@@ -118,7 +119,7 @@ We already talked about how having one or more idle resources who swarm on the b
 
 This section answers the third question from our quiz:  "Is high team utilization is a good thing?"
 
-No, **high team utilization is a bad thing** because the throughput won't change, but the cycle time will get *really* long.
+The answer is No: **high team utilization is a bad thing** because the throughput won't change, but the cycle time will get *really* long.
 
 There's actually a closed-form formula for this, for the case of an [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue); see the link for the derivation. 
 That's a system where arrivals are random ("Markov"), service time is random (the second M), and there's 1 server. 
