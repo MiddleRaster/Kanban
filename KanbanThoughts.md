@@ -91,7 +91,7 @@ No, **cycle time is independent of throughput.**
 Here's another important bit:  if you see work piling up, it's just sitting there aging, which means cycle times are long. **Long queues imply long cycle times.**
 
 So, UX (or dev) being idle doesn't hurt the throughput.
-But it does present an opportunity:  those **idle resources can swarm on the bottleneck, and that will increase throughput.**
+But it does present an opportunity:  those **idle resources can swarm on the bottleneck, which will increase throughput.**
 
 ## T-Shaped Resources
 
