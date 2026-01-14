@@ -139,7 +139,8 @@ To be clear, the worker at the bottleneck is at very high utilization, but the o
 
 ## 2nd Order Ignorance and the OODA Loop
 
-4. **Projects will be more successful if you get them right the first time.**  Wrong!
+**Projects will be more successful if you get them right the first time.**  Wrong!
+https://www.ceo-worldwide.com/blog/managing-international-projects/
 
 ## should I add a second on Little's Law
 
