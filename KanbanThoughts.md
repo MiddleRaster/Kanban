@@ -43,7 +43,7 @@ But how does this apply to software?
 
 For starters, it answers the first question of our quiz:  "is shipping more frequently the goal?" 
 
-Answer answer is No:  **Responsiveness or shorter cycle time is the goal.**
+The answer is No:  **Responsiveness or shorter cycle time is the goal.**
 
 For example, you could ship a product every week, but still have 3-year-long pipeline: not responsive. 
 Alternatively, you should ship a product every week, and have a 2-day-long pipeline:  very responsive.
