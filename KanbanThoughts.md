@@ -121,7 +121,8 @@ This section answers the third question from our quiz:  "Is high team utilizatio
 No, **high team utilization is a bad thing** because the throughput won't change, but the cycle time will get *really* long.
 
 There's actually a closed-form formula for this, for the case of an [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue); see the link for the derivation. 
-That's a system where arrivals are random ("Markov"), service time is random (the second M), and there's 1 server.
+That's a system where arrivals are random ("Markov"), service time is random (the second M), and there's 1 server. 
+This isn't actually the kind of queueing system we have, but the utilization curves are all similar.
 
 ![Alt text](./ClosedFormMM1.jpg)
 
