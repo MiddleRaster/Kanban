@@ -104,7 +104,7 @@ Ideally, you'll become an M-shaped resource with depth both up- and downstream.
 Here's a quick story:  I was pairing with a non-coder, Alex, on his tasks when his boss walked by.
 She spoke to him for just a minute and then left. 
 Alex turned to me and said, "Wow, this pairing really works. Usually, she would have chatted with me for an hour."
-Conclusion: even doing very little can result helping the throughput at the bottleneck.
+Conclusion: even doing very little can result in helping the throughput at the bottleneck.
 
 ## Utilization
 
