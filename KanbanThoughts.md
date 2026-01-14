@@ -110,7 +110,7 @@ Conclusion: even doing very little can result in helping the throughput at the b
 
 Our intuition fails us when we think about utilization.
 We think, "If someone's idle, he's not helping at all. Therefore, let's keep everyone busy."
-And that's completely wrong.
+And that's completely wrong:
 
 ![Alt text](./ThroughputVsUtilization.jpg)
 
@@ -120,7 +120,7 @@ This section answers the third question from our quiz:  "Is high team utilizatio
 
 No, **high team utilization is a bad thing** because the throughput won't change, but the cycle time will get *really* long.
 
-There actually a closed-form formula for this, for the case of an [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue); see the link for the derivation. 
+There's actually a closed-form formula for this, for the case of an [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue); see the link for the derivation. 
 That's a system where arrivals are random ("Markov"), service time is random (the second M), and 1 server.
 
 ![Alt text](./ClosedFormMM1.jpg)
