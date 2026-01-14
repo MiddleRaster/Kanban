@@ -120,7 +120,7 @@ This section answers the third question from our quiz:  "Is high team utilizatio
 
 No, **high team utilization is a bad thing** because the throughput won't change, but the cycle time will get *really* long.
 
-There actually a closed-form formula for this, for the case of an [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue). 
+There actually a closed-form formula for this, for the case of an [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue); see the link for the derivation. 
 That's a system where arrivals are random ("Markov"), service time is random (the second M), and 1 server.
 
 ![Alt text](./ClosedFormMM1.jpg)
@@ -137,8 +137,8 @@ To be clear, the worker at the bottleneck is at very high utilization, but the o
 
 ## 2nd Order Ignorance and the OODA Loop
 
-4. **Projects will be more successful if you get them right the first time.**
+4. **Projects will be more successful if you get them right the first time.**  Wrong!
 
-## Little's Law
+## should I add a second on Little's Law
 
 
