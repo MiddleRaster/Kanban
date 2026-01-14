@@ -15,8 +15,8 @@ If we intuitively understood queueing theory, that wouldn't be the case.
 
 So, let's start off with a simple quiz:  which of the following are true and which are false?
 1. **Shipping more frequently is the goal.**
-2. **High team utilization is a good thing.**
-3. **The more productive a team is, the sooner you can ship.**
+2. **The more productive a team is, the sooner you can ship.**
+3. **High team utilization is a good thing.**
 4. **Projects will be more successful if you get them right the first time.**
 
 I'll answer each of these as we go along, but if you want to see the answers now, click [here](Answers.html).
@@ -85,10 +85,12 @@ Click [here](Answers2.html) to see if you got it right.
 
 Here's the important bit:  **changing the WIP limits didn't change the throughput** - it's still 0.97 cards per day (it's not exactly 1.00 because of "entrance effects":  it takes a day or two for the first card even to get to the bottleneck at QA).
 
-Here's another important bit:  if you see work piling up, it's just sitting there aging, which means cycle times are long. **Long queues == long cycle time.**
+This answers our second question from the quiz:  "Will a more productive a team ship sooner?"
+No, **cycle time is independent of throughput.**
 
+Here's another important bit:  if you see work piling up, it's just sitting there aging, which means cycle times are long. **Long queues imply long cycle times.**
 
-So, UX (or dev) being idle doesn't hurt the throughput. 
+So, UX (or dev) being idle doesn't hurt the throughput.
 But it does present an opportunity:  those **idle resources can swarm on the bottleneck, and that will increase throughput.**
 
 ## T-Shaped Resources
@@ -101,10 +103,42 @@ Ideally, you'll become an M-shaped resource with depth both up- and downstream.
 
 Here's a quick story:  I was pairing with a non-coder, Alex, on his tasks when his boss walked by.
 She spoke to him for just a minute and then left. 
-Alex turned to me and said, "Wpw, this pairing really works. Usually, she would have chatted with me for an hour."
+Alex turned to me and said, "Wow, this pairing really works. Usually, she would have chatted with me for an hour."
 Conclusion: even doing very little can result helping the throughput at the bottleneck.
 
 ## Utilization
 
+Our intuition fails us when we think about utilization.
+We think, "If someone's idle, he's not helping at all. Therefore, let's keep everyone busy."
+And that's completely wrong.
+
 ![Alt text](./ThroughputVsUtilization.jpg)
+
+We already talked about how having one or more idle resource who swarm on the bottleneck increases throughput.
+
+This section answers the third question from our quiz:  "Is high team utilization is a good thing?"
+
+No, **high team utilization is a bad thing** because the throughput won't change, but the cycle time will get *really* long.
+
+There actually a closed-form formula for this, for the case of an [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue). 
+That's a system where arrivals are random ("Markov"), service time is random (the second M), and 1 server.
+
+![Alt text](./ClosedFormMM1.jpg)
+
+The important thing to note is that there is a pole at x = 1; that is, the queue length goes to infinity when utilization is 100%.
+And that means that cycle time skyrockets, too. 
+
+Notice also how steep the curve is at the far right:  at 95% utilization, the queue size is 19, but at 97.5%, the queue size is 32.333.
+A small increase in utilization had a large increase in queue size and cycle time.
+
+We don't want to be anywhere near that. Rather, 50% utilization means a queue size of 1.
+
+To be clear, the worker at the bottleneck is at very high utilization, but the others should be idle and swarming.
+
+## 2nd Order Ignorance and the OODA Loop
+
+4. **Projects will be more successful if you get them right the first time.**
+
+## Little's Law
+
 
