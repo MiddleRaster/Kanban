@@ -122,7 +122,7 @@ We already talked about how having one or more idle resources who swarm on the b
 
 This section answers the third question from our quiz:  "Is high team utilization is a good thing?"
 
-The answer is No: **high team utilization is a bad thing** because the throughput won't change, but the cycle time will get *really* long.
+The answer is No: high team utilization is a bad thing because the throughput won't change, but the **cycle time will get *really* long**.
 
 There's actually a closed-form formula for this, for the case of an [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue); see the link for the derivation. 
 That's a system where arrivals are random ("Markov"), service time is random (the second M), and there's 1 server. 
