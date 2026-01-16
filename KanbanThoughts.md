@@ -150,7 +150,7 @@ That's it; that's all you need.
 One important thing to note is that there will always be "2nd Order Ignorance" (2OI), the "unknown unknowns."
 You must account for all the unknown unknowns, things that you didn't even realize existed when you first started the project. 
 Realize that they're there, track their rate of discovery and utilize that information.
-So therefore, your first whack at a project will never be entirely right.
+Therefore, your first whack at a project will never be entirely right.
 
 This answers the last question:  "Will projects be more successful if you get them right the first time?"
 
