@@ -197,7 +197,7 @@ So, to recap my thesis here, that queueing theory is extremely counterintuitive,
 2. **The more productive a team is, the sooner you can ship.**
     - False. Cycle time is independent of throughput.
 3. **High team utilization is a good thing.**
-    - False. Higher utilization implies long cycle times. 
+    - False. Higher utilization implies longer cycle times. 
 4. **Projects will be more successful if you get them right the first time.**
     - False. Boyd’s Law states “Speed of iteration beats quality of iteration.” 
 
