@@ -203,3 +203,5 @@ So, to recap my thesis here, that queueing theory is extremely counterintuitive,
 
 
 That's all for now, though in the future, I'll write a post on the best way to handle bugs in Kanban (hint: the Andon cord).
+
+Back to [MiddleRaster's pages](https://middleraster.github.io/).
