@@ -89,6 +89,9 @@ This answers our second question from the quiz:  "Will a more productive a team 
 
 The answer is No: **cycle time is independent of throughput.**
 
+This has been known empirically for quite a while, but proven mathematically in 1961 by John Little, known as **Little's Law**:  L = λ * W, where L = average queue length, λ = average arrival rate, and W = average cycle time.
+Given two of these variables, you can calculate the remaining one. So, in our exercise, the rate at the bottleneck is .97, and the shortest cycle time is 2.94 days, giving a WIP of just about 3, which is exactly what we got: 1 card per UX, Dev and QA each.
+
 Here's another important bit:  if you see work piling up, it's just sitting there aging, which means cycle times are long. **Long queues imply long cycle times.**
 
 So, UX (or dev) being idle doesn't hurt the throughput.
@@ -137,11 +140,65 @@ We don't want to be anywhere near that. Rather, 50% utilization means a queue si
 
 To be clear, the worker at the bottleneck is at very high utilization, but the others should be idle and swarming.
 
-## 2nd Order Ignorance and the OODA Loop
+## Estimating, 2nd Order Ignorance and the OODA Loop
 
-**Projects will be more successful if you get them right the first time.**  Wrong!
-https://www.ceo-worldwide.com/blog/managing-international-projects/
+I've discussed how to estimate [elsewhere](https://middleraster.github.io/PM/PredictingDespitePoorEstimates.html) but it's good to read that over again.
 
-## should I add a second on Little's Law
+To apply it to our Kanban board, we update a cumulative flow diagram each week by counting up the items in the product backlog, and counting up all the items in the final Done column.
+That's it; that all you need.
+
+One important thing to note is that there will always be "2nd Order Ignorance" (2OI), the "unknown unknowns."
+You must account for all the unknown unknowns, things that you didn't even realize existed when you first started the project. 
+Realize that they're there, track their rate of discovery and utilize that information.
+So therefore, your first whack at a project will never be entirely right.
+
+This answers the last qeustion:  "Will projects be more successful if you get them right the first time?"
+
+The answer is No:  **it's impossible to 'get it right the first time.'**
+
+That's the flaw in Waterfall or Big Design Up Front, and is the reason Agile even exists.
+
+An example from a very different industry is from military tactics:  Boyd's Law states, **"Speed of iteration beats quality of iteration."**
+You can read about [the OODA loop here](https://www.ceo-worldwide.com/blog/managing-international-projects/).
+Scroll down to the section marked "OODA: Observe, Orient, Decide, Act" where the author, a CTO, recounts the story of John Boyd, a fighter pilot and military strategist. (I'll wait while you read that.)
+
+It's a great story, repeated all over, but some of the details are a little wrong: the F-86 wasn't entirely outclassed by the MiG-15, and the kill ratio wasn't as high as claimed.
+The reality was that both planes were superior in some areas but not in others and the kill ratio was actually about 3:1. 
+
+Nevertheless, Colonel Boyd's conclusions support the idea of iterating:
+
+Observation
+ - F‑86 pilots had better situational awareness due to canopy visibility and radar‑assisted gunsight
+ - U.S. command‑and‑control provided more reliable information flow
+
+Orientation
+ - U.S. pilots had far more WWII combat experience
+ - They adapted tactics faster and internalized lessons more quickly
+ - Soviet/Chinese/North Korean pilots were often flying rigid, doctrine‑driven patterns
+
+Decision
+ - U.S. pilots made quicker tactical choices because they weren’t bound to strict engagement rules
+ - They could improvise and exploit fleeting opportunities
+
+Action
+ - The F‑86’s superior roll rate and high‑speed handling let pilots execute decisions faster
+ - The MiG‑15’s advantages mattered less because its pilots couldn’t cycle decisions as quickly
+
+All except for the first O (Observation) have to do with speed, and as the fighter pilots go through the loop many times during a dogfight, they're iterating, and it's to their benefit to do so as fast as possible.
+
+That is, they're trying to have as short a cycle time as possible. And so should we in our development process if we want to be responsive to the market.
+
+## Conclusion
+So, to recap my thesis here, that queueing theory is extremely counterintuitive, here's the quiz again whose statements seem so reasonable, with answers:
+
+1. **Shipping more frequently is the goal.**
+    - False. Shorter cycle time is the goal.
+2. **The more productive a team is, the sooner you can ship.**
+    - False. Cycle time is independent of throughput.
+3. **High team utilization is a good thing.**
+    - False. Higher utilization implies long cycle times. 
+4. **Projects will be more successful if you get them right the first time.**
+    - False. Boyd’s Law states “Speed of iteration beats quality of iteration.” 
 
 
+That's all for now, though in the future, I'll write a post on the best way to handle bugs in Kanban.
