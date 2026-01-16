@@ -144,7 +144,7 @@ To be clear, the worker at the bottleneck is at very high utilization, but the o
 
 I've discussed how to estimate [elsewhere](https://middleraster.github.io/PM/PredictingDespitePoorEstimates.html) but it's good to read that over again.
 
-To apply it to our Kanban board, we update a cumulative flow diagram each week by counting up the items in the product backlog, and counting up all the items in the final Done column.
+To apply it to our Kanban board, each week we update the spreadsheet that generates a cumulative flow diagram by counting up the items in the product backlog, and counting up all the items in the final Done column.
 That's it; that all you need.
 
 One important thing to note is that there will always be "2nd Order Ignorance" (2OI), the "unknown unknowns."
@@ -152,7 +152,7 @@ You must account for all the unknown unknowns, things that you didn't even reali
 Realize that they're there, track their rate of discovery and utilize that information.
 So therefore, your first whack at a project will never be entirely right.
 
-This answers the last qeustion:  "Will projects be more successful if you get them right the first time?"
+This answers the last question:  "Will projects be more successful if you get them right the first time?"
 
 The answer is No:  **it's impossible to 'get it right the first time.'**
 
@@ -160,7 +160,7 @@ That's the flaw in Waterfall or Big Design Up Front, and is the reason Agile eve
 
 An example from a very different industry is from military tactics:  Boyd's Law states, **"Speed of iteration beats quality of iteration."**
 You can read about [the OODA loop here](https://www.ceo-worldwide.com/blog/managing-international-projects/).
-Scroll down to the section marked "OODA: Observe, Orient, Decide, Act" where the author, a CTO, recounts the story of John Boyd, a fighter pilot and military strategist. (I'll wait while you read that.)
+Scroll down to the section marked "OODA: Observe, Orient, Decide, Act" where the author, a CTO, recounts the story of Colonel John Boyd, a fighter pilot and military strategist. (I'll wait while you read that.)
 
 It's a great story, repeated all over, but some of the details are a little wrong: the F-86 wasn't entirely outclassed by the MiG-15, and the kill ratio wasn't as high as claimed.
 The reality was that both planes were superior in some areas but not in others and the kill ratio was actually about 3:1. 
@@ -185,8 +185,9 @@ Action
  - The MiG‑15’s advantages mattered less because its pilots couldn’t cycle decisions as quickly
 
 All except for the first O (Observation) have to do with speed, and as the fighter pilots go through the loop many times during a dogfight, they're iterating, and it's to their benefit to do so as fast as possible.
+That is, they're trying to have as short a cycle time as possible. 
 
-That is, they're trying to have as short a cycle time as possible. And so should we in our development process if we want to be responsive to the market.
+And so should we in our development process if we want to be responsive to the market; just like Toyota, justl like JIT, just like Kanban.
 
 ## Conclusion
 So, to recap my thesis here, that queueing theory is extremely counterintuitive, here's the quiz again whose statements seem so reasonable, with answers:
