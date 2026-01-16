@@ -158,7 +158,7 @@ The answer is No:  **it's impossible to 'get it right the first time.'**
 
 That's the flaw in Waterfall or Big Design Up Front, and is the reason Agile even exists.
 
-An example from a very different industry is from military tactics:  Boyd's Law states, **"Speed of iteration beats quality of iteration."**
+An example from a very different industry is military tactics:  Boyd's Law states, **"Speed of iteration beats quality of iteration."**
 You can read about [the OODA loop here](https://www.ceo-worldwide.com/blog/managing-international-projects/).
 Scroll down to the section marked "OODA: Observe, Orient, Decide, Act" where the author, a CTO, recounts the story of Colonel John Boyd, a fighter pilot and military strategist. (I'll wait while you read that.)
 
