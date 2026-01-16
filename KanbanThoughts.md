@@ -70,7 +70,7 @@ When I was a dev-instructor at *StupendousCorp*, when teaching our Agile/Estimat
 No further explaining was going to help, so I wrote a Kanban simulator to allow them to get a feel for it.
 
 So, here's an exercise. Suppose you have a tiny team with 1 UX person, 1 Dev person and 1 QA person.
-And suppose the UX work gets 3 cards done in a day, dev gets 2 cards done per day, and QA does 1 card per day.
+And suppose the UX worker gets 3 cards done in a day, dev gets 2 cards done per day, and QA does 1 card per day.
 
 Clearly, **throughput is completely determined by the slowest step**, which in this somewhat contrived case is QA.
 So I'm setting up some bottlenecks.
