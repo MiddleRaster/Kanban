@@ -145,7 +145,7 @@ To be clear, the worker at the bottleneck is at very high utilization, but the o
 I've discussed how to estimate [elsewhere](https://middleraster.github.io/PM/PredictingDespitePoorEstimates.html) but it's good to read that over again.
 
 To apply it to our Kanban board, each week we update the spreadsheet that generates a cumulative flow diagram by counting up the items in the product backlog, and counting up all the items in the final Done column.
-That's it; that all you need.
+That's it; that's all you need.
 
 One important thing to note is that there will always be "2nd Order Ignorance" (2OI), the "unknown unknowns."
 You must account for all the unknown unknowns, things that you didn't even realize existed when you first started the project. 
