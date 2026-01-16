@@ -202,4 +202,4 @@ So, to recap my thesis here, that queueing theory is extremely counterintuitive,
     - False. Boyd’s Law states “Speed of iteration beats quality of iteration.” 
 
 
-That's all for now, though in the future, I'll write a post on the best way to handle bugs in Kanban.
+That's all for now, though in the future, I'll write a post on the best way to handle bugs in Kanban (hint: the Andon cord).
