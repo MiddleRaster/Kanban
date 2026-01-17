@@ -104,7 +104,7 @@
       </div>
     </div>
   </div>
-  <div id="results">Throughput: 0.00 cards/day | Avg Sojourn time: 0.00 days</div>
+  <div id="results">Throughput:  0.00 cards/day | Avg Cycle Time: 0.00 days | UX Util: 0.00% | Dev Util: 0.00% | QA Util: 0.00%</div>
 
   <div class="board" id="board"></div>
 
@@ -156,11 +156,16 @@ class Simulator {
   constructor(config) {
     this.config = config;
     this.columns = {
-      backlog: [],
-      uxWorking: [], uxDone: [],
+         backlog: [],
+       uxWorking: [],  uxDone: [],
       devWorking: [], devDone: [],
-      qaWorking: [],
-      finalDone: []
+       qaWorking: [],
+       finalDone: []
+    };
+    this.busyTicks = {
+       ux: 0,
+      dev: 0,
+       qa: 0
     };
     this.hour = 0;
     for (let i=0; i<25; i++) this.columns.backlog.push(new Card());
@@ -182,6 +187,11 @@ class Simulator {
   step() {
     if (this.isAllDone()) return;
     this.hour++;
+
+    // busy tick accounting
+    if (this.columns.uxWorking.length  > 0) this.busyTicks.ux++;
+    if (this.columns.devWorking.length > 0) this.busyTicks.dev++;
+    if (this.columns.qaWorking.length  > 0) this.busyTicks.qa++;
 
     // pull from right to left
     this.processPhase( "qaWorking",  "finalDone", this.config.qaWorkers,  this.config.qaRate /8.0,  this.config.qaWip,  true,  "devDone");
@@ -226,6 +236,9 @@ class Simulator {
     return total / 25.0 / 8.0;
   }
   getThroughput() { return 25.0 * 8.0 / this.hour; }
+  getUxUtil() { return (this.busyTicks.ux / this.hour)*100; }
+  getDevUtil(){ return (this.busyTicks.dev/ this.hour)*100; }
+  getQaUtil() { return (this.busyTicks.qa / this.hour)*100; }
 
   render() {
     let board = document.getElementById("board");
@@ -330,8 +343,12 @@ function run() {
 }
 
 function showResults() {
-  document.getElementById("results").innerText =
-    `Throughput: ${sim.getThroughput().toFixed(2)} cards/day | Avg Sojourn time: ${sim.getAverageFlightTime().toFixed(2)} days`;
+    document.getElementById("results").innerText =
+             `Throughput: ${sim.getThroughput().toFixed(2)} cards/day | ` +
+             `Avg Cycle Time: ${sim.getAverageFlightTime().toFixed(2)} days | ` +
+             `UX Util: ${sim.getUxUtil().toFixed(1)}% | ` +
+             `Dev Util: ${sim.getDevUtil().toFixed(1)}% | ` +
+             `QA Util: ${sim.getQaUtil().toFixed(1)}%`;
 }
 </script>
 </body>
