@@ -98,6 +98,10 @@
       <button onclick="initSimulator()">Restart</button>
       <button onclick="step()">Step</button>
       <button onclick="run()">Run</button>
+      <div>
+        <label for="tickDelay">Tick Delay (ms):</label>
+        <input id="tickDelay" type="number" value="25" min="1" />
+      </div>
     </div>
   </div>
   <div id="results">Throughput: 0.00 cards/day | Avg Sojourn time: 0.00 days</div>
@@ -317,7 +321,7 @@ function run() {
   function loop() {
     if (!sim.isAllDone()) {
       sim.step();
-      setTimeout(loop, 12.5);
+      setTimeout(loop, parseFloat(document.getElementById("tickDelay").value));
     } else {
       showResults();
     }
@@ -332,6 +336,3 @@ function showResults() {
 </script>
 </body>
 </html>
-
-
-
