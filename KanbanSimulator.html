@@ -162,7 +162,7 @@ class Simulator {
        qaWorking: [],
        finalDone: []
     };
-    this.busyTicks = {
+    this.busyTime = {
        ux: 0,
       dev: 0,
        qa: 0
@@ -187,11 +187,6 @@ class Simulator {
   step() {
     if (this.isAllDone()) return;
     this.hour++;
-
-    // busy tick accounting
-    if (this.columns.uxWorking.length  > 0) this.busyTicks.ux++;
-    if (this.columns.devWorking.length > 0) this.busyTicks.dev++;
-    if (this.columns.qaWorking.length  > 0) this.busyTicks.qa++;
 
     // pull from right to left
     this.processPhase( "qaWorking",  "finalDone", this.config.qaWorkers,  this.config.qaRate /8.0,  this.config.qaWip,  true,  "devDone");
@@ -219,7 +214,15 @@ class Simulator {
       let capacity = rate;
       while (capacity > 0 && workColumn.length > 0) {
         let card = workColumn[0];
-        capacity = card.work(capacity);
+
+        let before = card.workRemaining;
+        capacity   = card.work(capacity);
+        let after  = card.workRemaining;
+
+        if (workCol ===  "uxWorking") this.busyTime.ux  += (before - after)/rate;
+        if (workCol === "devWorking") this.busyTime.dev += (before - after)/rate;
+        if (workCol ===  "qaWorking") this.busyTime.qa  += (before - after)/rate;
+
         if (card.isDone()) {
           if (isLast) card.setEndHour(this.hour+1);
           doneColumn.push(card);
@@ -236,9 +239,9 @@ class Simulator {
     return total / 25.0 / 8.0;
   }
   getThroughput() { return 25.0 * 8.0 / this.hour; }
-  getUxUtil() { return (this.busyTicks.ux / this.hour)*100; }
-  getDevUtil(){ return (this.busyTicks.dev/ this.hour)*100; }
-  getQaUtil() { return (this.busyTicks.qa / this.hour)*100; }
+  getUxUtil()  { return (this.busyTime.ux /(this.config.uxWorkers *this.hour))*100; }
+  getDevUtil() { return (this.busyTime.dev/(this.config.devWorkers*this.hour))*100; }
+  getQaUtil()  { return (this.busyTime.qa /(this.config.qaWorkers *this.hour))*100; }
 
   render() {
     let board = document.getElementById("board");
