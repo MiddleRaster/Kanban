@@ -90,7 +90,7 @@ This answers our second question from the quiz:  "Will a more productive a team 
 The answer is No: **cycle time is independent of throughput.**
 
 This has been known empirically for quite a while, but was proven mathematically in 1961 by John Little, known as **Little's Law**:  L = λ * W, where L = average queue length, λ = average arrival rate, and W = average cycle time.
-Given two of these variables, you can calculate the remaining one. So, in our exercise, the rate at the bottleneck is .97, and the shortest cycle time is 2.94 days, giving a WIP of just about 3, which is exactly what we got: 1 card each per UX, Dev and QA.
+Given two of these variables, you can calculate the remaining one. So, in our exercise, the rate at the bottleneck is .97, and the shortest cycle time is 2.94 days, giving a WIP of just about 3, which is exactly what we've got: 1 card each per UX, Dev and QA.
 
 Here's another important bit:  if you see work piling up, it's just sitting there aging, which means cycle times are long. **Long queues imply long cycle times.**
 
