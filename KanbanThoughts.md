@@ -112,7 +112,7 @@ Conclusion: even doing very little can result in helping the throughput at the b
 
 ## Utilization
 
-Our intuition fails us when we think about utilization.
+Our intuition totally fails us when we think about utilization.
 We think, "If someone's idle, he's not helping at all. Therefore, let's keep everyone busy."
 And that's completely wrong:
 
