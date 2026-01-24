@@ -1,6 +1,6 @@
 ---
 layout: default
-title: How Low Can WIP Limits Go?
+title: How Low WIP Limits Can Go
 ---
 
 Things that drive me nuts:
