@@ -28,7 +28,7 @@ Suppose you have 3 columns for dev:  working, code-review, done.
 And with a nice tight WIP limit (equal to the number of devs), the once a dev's task is done, he moves his card to the code-review column and then he's blocked by the WIP limit, because pulling a new card into the dev columns would be over the WIP limit.
 There's nothing for him to do except to do the code-review for one of the other devs. which is exactly what we want.
 
-If there's no code review to do, he should swarm on the downstream bottleneck, or less ideally, pair with another dev.
+If there's no code review to do, he should swarm on the downstream bottleneck, or if dev is the bottleneck, pair with another dev.
 
 Why are people so hesitant to try what I consider the obvious default?
 Because they worry that a dev might be blocked for some reason (and they don't want someone idle, which is wrongheaded anyway: see my section on [utilization](KanbanThoughts.md#utilization)).
@@ -73,5 +73,6 @@ Similarly, if you have UX designing in front of dev and QA, but doing UX usabili
 
 
 Back to [MiddleRaster's Thoughts](https://middleraster.github.io).
+
 
 
