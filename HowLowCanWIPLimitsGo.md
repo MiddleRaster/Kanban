@@ -71,4 +71,5 @@ You could then assign a "Fractional WIP":  that is, a single number (e.g., 1) th
 Similarly, if you have UX designing in front of dev and QA, but doing UX usability testing after QA's testing, then this would be a single number split across the UX columns before dev and the UX columns after QA.
 
 
-Back to [MiddleRaster's Thoughts]\(https://middleraster.github.io).
+Back to [MiddleRaster's Thoughts](https://middleraster.github.io).
+
