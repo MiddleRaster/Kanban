@@ -43,7 +43,7 @@ Another thing: by being blocked, the dev is forced to get himself unblocked, for
 Let's tighten things up a bit more:  the WIP limit is half the number of workers.
 
 In this case, you only need two columns for dev (working, done), because the devs are forced to pair program all the time.
-If you pair all the time, it's like you're doing continuous, real-time code-reviews.
+If you pair all the time, it's like you're doing continuous, real-time code-reviews, so you don't need an explicit column for something they're doing all the time anyway.
 
 If the pair is blocked or starved for work, they swarm either downstream or upstream (or both).
 
@@ -73,6 +73,7 @@ Similarly, if you have UX designing in front of dev and QA, but doing UX usabili
 
 
 Back to [MiddleRaster's Thoughts](https://middleraster.github.io).
+
 
 
 
