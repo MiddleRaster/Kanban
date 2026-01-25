@@ -72,8 +72,13 @@ You could then assign a "Fractional WIP":  that is, a single number (e.g., 1) th
 Similarly, if you have UX designing in front of dev and QA, but doing UX usability testing after QA's testing, then this would be a single number split across the UX columns before dev and the UX columns after QA.
 
 
+## Summary
+
+Smaller WIP limits mean shorter cycle times.
+
+At the very least, start with the upper-end WIP limit I recommend: the number of workers in a discipline.
+If you want even shorter cycle time, try pairing or mobbing (and be aware that hygiene and interpersonal awareness are more important than ever).
+
+Happy WIP limiting!
+
 Back to [MiddleRaster's Thoughts](https://middleraster.github.io).
-
-
-
-
