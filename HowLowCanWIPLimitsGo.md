@@ -28,10 +28,11 @@ Suppose you have 3 columns for dev:  working, code-review, done.
 And with a nice tight WIP limit (equal to the number of devs), the once a dev's task is done, he moves his card to the code-review column and then he's blocked by the WIP limit, because pulling a new card into the dev columns would be over the WIP limit.
 There's nothing for him to do except to do the code-review for one of the other devs. which is exactly what we want.
 
-If there's no code review to do, he should swarm on the bottleneck, either upstream or downstream, and if he can't tell where the bottleneck is, he can pair with another dev.
+If there's no code review to do, he should swarm on the downstream bottleneck, or less ideally, pair with another dev.
 
 Why are people so hesitant to try what I consider the obvious default?
-Because they worry that a dev might be blocked for some reason.
+Because they worry that a dev might be blocked for some reason (and they don't want someone idle, which is wrongheaded anyway: see my section on [utilization](KanbanThoughts.md#utilization)).
+
 But my question is:  if a dev task is blocked (e.g., by a dependency that isn't ready), then why was the story in the ready backlog at all? It *wasn't ready* to go.
 
 Another thing: by being blocked, the dev is forced to get himself unblocked, for example by pairing with the (possibly external) team member who is handing out the dependency, instead of waiting around for the blockage to be resolved (and thus making cycle time go up!).
@@ -72,4 +73,5 @@ Similarly, if you have UX designing in front of dev and QA, but doing UX usabili
 
 
 Back to [MiddleRaster's Thoughts](https://middleraster.github.io).
+
 
