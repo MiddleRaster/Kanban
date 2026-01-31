@@ -25,7 +25,7 @@ A WIP limit equal to the number of devs solves a common problem, a bottleneck at
 And I get it; people want to get their own work done.
 
 Suppose you have 3 columns for dev:  working, code-review, done.
-And with a nice tight WIP limit (equal to the number of devs), then once a dev's task is done, he moves his card to the code-review column and then he's blocked by the WIP limit, because pulling a new card into the dev columns would be over the WIP limit.
+And with a nice tight WIP limit (equal to the number of devs), once a dev's task is done, he moves his card to the code-review column and then he's blocked by the WIP limit, because pulling a new card into the dev columns would be over the WIP limit.
 There's nothing for him to do except to do the code-review for one of the other devs. which is exactly what we want.
 
 If there's no code review to do, he should swarm on the downstream bottleneck, or if dev is the bottleneck, pair with another dev.
@@ -82,4 +82,5 @@ If you want even shorter cycle time, try pairing or mobbing (and be aware that h
 Happy WIP limiting!
 
 Back to [MiddleRaster's Thoughts](https://middleraster.github.io).
+
 
