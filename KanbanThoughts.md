@@ -19,7 +19,7 @@ So, let's start off with a simple quiz:  which of the following are true and whi
 3. **High team utilization is a good thing.**
 4. **Projects will be more successful if you get them right the first time.**
 
-I'll answer each of these as we go along, but if you want to see the answers now, click [here](Answers.html).
+I'll answer each of these as we go along, but if you want to see the answers now, click [here](/Kanban/Answers.html).
 
 ## Kanban Beginnings
 
