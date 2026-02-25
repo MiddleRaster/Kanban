@@ -52,7 +52,7 @@ This is our first queueing theory fact:  cycle time and throughput are separate 
 
 ## Kanban Overview
 
-For a review (or overview) of Kanban, click [here](KanbanOverview.html).
+For a review (or overview) of Kanban, click [here](/Kanban/KanbanOverview.html).
 
 ## Calculating Cycle time
 
@@ -79,9 +79,9 @@ Your task is to minimize cycle time, but do so cost-effectively.
 One way to shorten cycle time is to hire more people, but that's expensive and you don't have budget. So you can't do that.
 You've already hired the best people you can find, so more training or other techniques to increase QA's output are not going to work.
 
-All you can fiddle with is the WIP limits. Go ahead and play with the [Kanban Simulator](KanbanSimulator.html), until you have cycle time (also called "Sojourn time") minimized.
+All you can fiddle with is the WIP limits. Go ahead and play with the [Kanban Simulator](/Kanban/KanbanSimulator.html), until you have cycle time (also called "Sojourn time") minimized.
 
-Click [here](Answers2.html) to see if you got it right.
+Click [here](/anban/Answers2.html) to see if you got it right.
 
 Here's the important bit:  **changing the WIP limits didn't change the throughput** - it's still 0.97 cards per day (it's not exactly 1.00 because of "entrance effects":  it takes a day or two for the first card even to get to the bottleneck at QA).
 
