@@ -81,7 +81,7 @@ You've already hired the best people you can find, so more training or other tec
 
 All you can fiddle with is the WIP limits. Go ahead and play with the [Kanban Simulator](/Kanban/KanbanSimulator.html), until you have cycle time (also called "Sojourn time") minimized.
 
-Click [here](/anban/Answers2.html) to see if you got it right.
+Click [here](/Kanban/Answers2.html) to see if you got it right.
 
 Here's the important bit:  **changing the WIP limits didn't change the throughput** - it's still 0.97 cards per day (it's not exactly 1.00 because of "entrance effects":  it takes a day or two for the first card even to get to the bottleneck at QA).
 
