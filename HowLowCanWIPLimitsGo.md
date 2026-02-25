@@ -12,7 +12,7 @@ Some things that drive me nuts:
 2. People think that limiting WIP is all about avoiding multi-tasking (rather than being all about cycle time).
 3. People set the WIP limits to ludicrously high values and then wonder why they aren't seeing shorter cycle time.
 
-If you've read my post on [Kanban and Queueing Theory](KanbanThoughts.html), or played with my [Kanban simulator](KanbanSimulator.html), then you know that the lower the WIP limit, the shorter the cycle time.
+If you've read my post on [Kanban and Queueing Theory](/Kanban/KanbanThoughts.html), or played with my [Kanban simulator](/Kanban/KanbanSimulator.html), then you know that the lower the WIP limit, the shorter the cycle time.
 And if the team members swarm on the bottleneck(s), the throughput goes up.
 
 So, how low should we go?  Let's think it through.
@@ -82,5 +82,6 @@ If you want even shorter cycle time, try pairing or mobbing (and be aware that h
 Happy WIP limiting!
 
 Back to [MiddleRaster's Thoughts](https://middleraster.github.io).
+
 
 
