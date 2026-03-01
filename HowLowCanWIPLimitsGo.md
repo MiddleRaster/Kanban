@@ -61,7 +61,7 @@ The columns are: team working, team done.
 Of course, if you're mobbing on everything, you don't really need a Kanban board.
 
 
-## WIP limit < 1 (Franctional WIP)
+## WIP limit < 1 (Fractional WIP)
 
 Suppose you're doing DevOps, where the Devs own Operations, but there's a QA team involved, in between.
 
@@ -82,6 +82,7 @@ If you want even shorter cycle time, try pairing or mobbing (and be aware that h
 Happy WIP limiting!
 
 Back to [MiddleRaster's Thoughts](https://middleraster.github.io).
+
 
 
 
