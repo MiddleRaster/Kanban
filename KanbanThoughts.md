@@ -187,7 +187,7 @@ Action
 All except for the first O (Observation) have to do with speed, and as the fighter pilots go through the loop many times during a dogfight, they're iterating, and it's to their benefit to do so as fast as possible.
 That is, they're trying to have as short a cycle time as possible. 
 
-And so should we in our development process if we want to be responsive to the market; just like Toyota, justl like JIT, just like Kanban.
+And so should we in our development process if we want to be responsive to the market; just like Toyota, just like JIT, just like Kanban.
 
 ## Conclusion
 So, to recap my thesis here, that queueing theory is extremely counterintuitive, here's the quiz again whose statements seem so reasonable, with answers:
