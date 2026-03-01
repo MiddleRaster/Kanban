@@ -85,7 +85,7 @@ Click [here](/Kanban/Answers2.html) to see if you got it right.
 
 Here's the important bit:  **changing the WIP limits didn't change the throughput** - it's still 0.97 cards per day (it's not exactly 1.00 because of "entrance effects":  it takes a day or two for the first card even to get to the bottleneck at QA).
 
-This answers our second question from the quiz:  "Will a more productive a team ship sooner?"
+This answers our second question from the quiz:  "Will a more productive team ship sooner?"
 
 The answer is No: **cycle time is independent of throughput.**
 
